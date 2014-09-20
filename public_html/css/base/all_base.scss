@@ -1,0 +1,103 @@
+﻿@import 'normalize.scss';
+@import 'layout.scss';
+@import 'typography.scss';
+
+//Color Variables
+$grey: #ececec;
+$darkgrey:#a5a5a5;
+$black: #474747;
+
+//Font Variables
+$bebas: 'bebasregular', Arial,sans-serif;
+
+//Media Queries
+$lmed:59.00em;
+$med: 47.19em;
+$small:41.07em;
+$xsmall:30.44em;
+//Mixins
+@mixin border-image($bi) {
+    -webkit-border-image: $bi;
+    -moz-border-image: $bi;
+    -ms-border-image: $bi;
+    border-image: $bi;
+}
+
+@mixin transition ($t) {
+    -moz-transition: $t;
+    -o-transition: $t;
+    -webkit-transition: $t;
+    transition: $t;
+}
+
+//Base
+
+a {
+    text-decoration: none;
+    color: rgb(71,71,71);
+}
+
+body {
+    background-color: rgb(250,250,250);
+    color: #464646;
+    font-family: Arial, sans-serif;
+}
+
+.btm-border {
+    @include border-image(url(../../graphics/base/diag-pattern.png) 0 0 100% 0 repeat);
+    border-bottom-width: 5px;
+    border-bottom-style: inset;
+}
+
+
+
+//Heading Font
+h2, h3, h4 {
+    font-family: 'bebasregular', Arial,sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: .875em;
+    word-spacing: 2px;
+}
+
+h4 {
+    font-size: .75em;
+}
+
+
+//Content Title
+.content-title {
+    @include border-image(url(../../graphics/base/diag-pattern.png) 0 0 100% 0 repeat);
+    border-bottom: 5px inset;
+    padding: 0 0 30px 0;
+
+
+    h2 {
+        font-size: 1.5em;
+        padding-bottom: 15px;
+        line-height: 35px;
+    }
+
+    p {
+        font-size: 0.75em;
+        color: #9e9e9e;
+        width:83%;
+
+        em {
+            font-style: italic;
+            line-height:20px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 41.07em){
+    .content-title p{
+        width:100%;
+    }
+
+
+}

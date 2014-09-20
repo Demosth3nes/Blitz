@@ -1,0 +1,332 @@
+﻿
+//Base css -Mixins,  Variables, Typography
+@import '../base/all_base.scss';
+
+//Header, Aside, Footer
+@import '../modules/header.scss';
+@import '../modules/footer.scss';
+
+//Components
+@import '../components/buttons.scss';
+
+
+
+//   Slider including slider counters
+.slider-container {
+    background-color: rgb(233,233,233);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+
+    .slider {
+        width: 400%;
+        -webkit-transition: all 1.0s ease-in-out;
+        -moz-transition: all 1.0s ease-in-out;
+        -o-transition: all 1.0s ease-in-out;
+        transition: all 1.0s ease-in-out;
+        position: relative;
+
+        img {
+            width: 25%;
+            float: left;
+        }
+    }
+
+
+
+    .slider-counters {
+        position: absolute;
+        top: 73%;
+        right: 9%;
+
+        .currentslide {
+            background-color: #444;
+        }
+
+        span {
+            border: solid 2px black;
+            background-color: white;
+        }
+    }
+
+    figure {
+        float: left;
+        margin: 0px;
+        min-height: 82px;
+
+        h2 {
+            padding: 15px;
+            word-spacing: 3px;
+        }
+
+        p {
+            font-size: 0.8em;
+            padding: 0 10px 13px 18px;
+            min-height: 40px;
+        }
+    }
+}
+
+/*   Generated Content for slider */
+
+.slider-text::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12.5px 12px 12.5px;
+    border-color: transparent transparent #ebecec transparent;
+    position: absolute;
+    bottom: 98px;
+    left: 50%;
+}
+
+
+/*  Featured Section, 1st section  */
+.section-featured {
+    overflow: hidden;
+    padding-bottom: 50px;
+
+    & article:first-child {
+        margin-left: 0;
+    }
+
+
+    .featured_header-left:before {
+        content: url('../../graphics/home/magnify_glass.png');
+        position: absolute;
+        left: 0%;
+    }
+
+    .featured_header-center:before {
+        content: url('../../graphics/home/star.png');
+        position: absolute;
+        left: 0%;
+    }
+
+    .featured_header-right:before {
+        content: url('../../graphics/home/message.png');
+        position: absolute;
+        left: -7%;
+        top: -2px;
+    }
+
+    h2 {
+        font-size: 1.25em;
+        width: 70%;
+        margin-bottom: 20px;
+        padding-left: 62px;
+        word-spacing: 2px;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 0.75em;
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+}
+/* Current Projects, 2nd section*/
+.section-current_projects {
+    position: relative;
+
+
+    .current_projects-header {
+        margin: 20px auto 70px;
+        display: table;
+        font-size: 1.125em;
+    }
+
+    .current_projects-header::before {
+        content: url(../../graphics/home/lastest_projects_header.png);
+        position: absolute;
+        right: 0%;
+        bottom: -6px;
+    }
+
+    .current_projects-header::after {
+        content: url(../../graphics/home/lastest_projects_header.png);
+        position: absolute;
+        left: 0%;
+        bottom: -6px;
+    }
+
+    article {
+        width: 25%;
+        float: left;
+
+        img {
+            border: 2px solid #f0f0f0;
+        }
+
+        img:hover {
+            border: 2px solid #B1B1B1;
+        }
+
+        h3 {
+            padding: 15px 0;
+        }
+
+        p {
+            font-size: 0.75em;
+            width: 93%;
+            line-height: 21px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 59.00em) {
+    /*   Featured Section */
+    .section-featured {
+
+        h2 {
+            width: 80%;
+            padding-left: 0px;
+        }
+
+        .featured_header-left:before, .featured_header-center:before, .featured_header-right:before {
+            display: none;
+        }
+
+        p {
+            width: 85%;
+        }
+    }
+
+    .section-current_projects {
+        width: 80%;
+        overflow: hidden;
+        margin: 0 auto;
+
+        article {
+            width: 41%;
+            padding-left: 30px;
+
+            p {
+                width: 68%;
+            }
+        }
+    }
+
+    .current_projects-header::before {
+        display: none;
+    }
+
+
+
+    .current_projects-header::after {
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 47.19em) {
+
+
+    .slider-container {
+        .slider-counters {
+            position: relative;
+            text-align:center;
+            right:0%;
+
+            .currentslide {
+                background-color: #444;
+            }
+
+            span {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin-top: 10px;
+                margin-left: 10px;
+                background-color: white;
+            }
+        }
+        figure{
+            text-align:center;
+        }
+    }
+
+    .current_projects-header::before {
+        display: none;
+    }
+
+    .current_projects-header::after {
+        display: none;
+    }
+
+    .slider-text::after {
+        display: none;
+    }
+
+    .section-current_projects {
+
+        article {
+            width: 225px;
+            padding-left: 0px;
+            float: none;
+            margin: 25px auto;
+
+            p {
+                width: 100%;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 41.07em) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .slider-container {
+        .slider-counters {
+            display: table;
+            margin: 0 auto;
+            left: 0;
+        }
+    }
+
+    .section-featured {
+        & article:first-child {
+            margin-left: auto;
+        }
+
+        h2 {
+            width: 80%;
+            padding-left: 57px;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        .featured_header-left:before, .featured_header-center:before, .featured_header-right:before {
+            display: block;
+        }
+    }
+}
+
+
+@media screen and (max-width: 30.44em) {
+
+
+    .section-featured {
+
+        h2 {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        .featured_header-left:before, .featured_header-center:before, .featured_header-right:before {
+            display: none;
+        }
+    }
+}

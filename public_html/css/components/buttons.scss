@@ -1,0 +1,26 @@
+﻿//Counters
+.slider-counters span {
+    width: 23px;
+    height: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+//Double Arrow Link
+.link-primary {
+    font-size: 0.75em;
+    padding-top: 1px;
+    position: relative;
+    font-family: $bebas;
+    text-transform: uppercase;
+    word-spacing: 2px;
+
+
+    &:before {
+        content: url(../../graphics/home/double_arrow.png);
+        position: relative;
+        left: 0;
+        top: 1px;
+        padding-right:4px;
+    }
+}

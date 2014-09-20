@@ -1,0 +1,21 @@
+﻿
+footer {
+    border-top-color:white;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+    border-width:5px;
+    @include border-image(url(../../graphics/base/diag-pattern.png) 100% 0 0 0 repeat);
+    position:relative;
+    bottom:0%;
+    border-top-style:inset;
+    .footer-wrapper {
+        max-width: 940px;
+        margin: 0 auto;
+        font-size: 0.75em;
+        padding-top: 30px;
+
+        p {
+            padding-left: 20px;
+        }
+    }
+}

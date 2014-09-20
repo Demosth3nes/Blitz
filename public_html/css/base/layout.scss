@@ -1,0 +1,45 @@
+﻿//Main Wrapper for content
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 98%;
+}
+
+//Layout Content Container
+.content-wrapper {
+    width: 70%;
+    overflow: hidden;
+    float: left;
+}
+
+//Responsive 4 Column (of 12) layout
+//Spreads three items evenly across the page
+//Then centers the content as the window becomes smaller
+.layout-col4 {
+    width: 30%;
+    float: left;
+    position: relative;
+    margin-left:43px;
+}
+
+@media screen and (max-width: 59em) {
+ .layout-col4 {
+     width:33%;
+     margin-left:0;
+     }
+}
+
+@media screen and (max-width: 41.07em) {
+  .wrapper{
+      width:89%;
+  }
+    .layout-col4 {
+        width: 70%;
+        margin: 17px auto;
+        float: none;
+    }
+}
+
+
+

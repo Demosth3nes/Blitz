@@ -1,0 +1,24 @@
+﻿//Aside
+aside {
+    float: right;
+    width: 23%;
+    margin-top: 98px;
+
+    h4 {
+        @include border-image(url(../../graphics/base/diag-pattern.png) 0 0 100% 0 repeat);
+        border-bottom-width: 5px;
+        border-bottom-style: inset;
+        color: #464646;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    p, ul {
+        font-size: 0.75em;
+        margin: 24px 0 20px 0;
+    }
+
+    li {
+        padding-bottom: 6px;
+    }
+}

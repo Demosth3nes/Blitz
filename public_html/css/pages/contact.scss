@@ -1,0 +1,113 @@
+﻿//Base css -Mixins,  Variables, Typography
+@import '../base/all_base.scss';
+
+//Header, Aside, Footer
+@import '../modules/all_modules.scss';
+
+//Components
+@import '../components/buttons.scss';
+
+/*   Page Introduction   */
+.intro {
+    font-size: 0.75em;
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+/*   Contact Form  */
+.form-contact {
+    margin-top: 40px;
+    overflow: hidden;
+    input{
+        padding: 0 0 0 8px;
+
+        @extend .textarea-message;
+        
+        
+    }
+
+    .textarea-message{
+        display: block;
+        font-size: 12px;
+        word-spacing: 2px;
+        background-color: #fafafa;
+        border: solid 1px #eee;
+        margin-top: 10px;
+        width: 215px;
+        height: 33px;
+        box-sizing: border-box;
+        overflow:auto;
+
+        /*Resize the message box */
+        &[name = "message"] {
+            width: 490px;
+            height: 203px;
+             padding: 8px 0 0 8px;
+        }
+    }
+
+    input[name = "submit"] {
+        background-color: white;
+        border: none;
+        background: url(../../graphics/contact/submit.gif) no-repeat;
+        background-position: left;
+        margin-top:15px;
+        padding-left:20px;
+        width:64px;    
+        height:15px;
+        cursor:pointer;
+    }
+}
+
+/* Placeholder selector for all browsers*/
+*::-webkit-input-placeholder {
+    color: #c6c6c6;
+    font-family: $bebas;
+    text-transform: uppercase;
+}
+
+*:-moz-placeholder {
+    color: #c6c6c6;
+    font-family: $bebas;
+    text-transform: uppercase;
+}
+
+*::-moz-placeholder {
+    color: #c6c6c6;
+    font-family: $bebas;
+    text-transform: uppercase;
+}
+
+*:-ms-input-placeholder {
+    color: #c6c6c6;
+    font-family: $bebas;
+    text-transform: uppercase;
+}
+
+/* Media Queries   */
+
+@media screen and (max-width: 47.19em) {
+
+    .content-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .form-contact {
+        .textarea-message {
+            width:100%;
+        }
+    }
+
+    //Aside
+    aside {
+        float: none;
+        width: 100%;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        font-size: 1.25em;
+        p{
+            text-align:left;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+﻿//Base css -Mixins,  Variables, Typography
+@import '../base/all_base.scss';
+
+//Header, Aside, Footer
+@import '../modules/all_modules.scss';
+
+//Components
+@import '../components/buttons.scss';
+
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    width: 400%;
+    -webkit-transition: all 1.0s ease-in-out;
+    -moz-transition: all 1.0s ease-in-out;
+    -o-transition: all 1.0s ease-in-out;
+    transition: all 1.0s ease-in-out;
+    transform: translate(0%);
+
+    section {
+        width: 25%;
+        float: left;
+    }
+}
+
+
+
+/*   Blog Post  */
+.blog-post {
+    padding-bottom: 62px;
+    overflow: hidden;
+
+
+    h3 {
+        margin: 40px 0 20px 0;
+    }
+
+    p {
+        font-size: 0.75em;
+        line-height: 20px;
+        width: 74%;
+        float: right;
+        padding-right: 15px;
+
+        span {
+            color: #8caf2f;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    }
+
+    img {
+        margin-bottom: 30px;
+        width: 99%;
+        border: 1px solid $grey;
+    }
+
+    img:hover {
+        border: 1px solid $darkgrey;
+    }
+}
+
+
+/*  Blog Side Information-Dates,Tags,Comments*/
+.blog-side-info {
+    float: left;
+
+    h4:first-of-type {
+        margin-top: 0;
+    }
+
+    a {
+        font-size: 0.75em;
+        color: #bababa;
+    }
+
+    .blog-tags-list {
+        li:first-of-type {
+            border-right: solid 1px #bababa;
+            padding: 0 7px 0 0;
+        }
+
+        li {
+            display: inline-block;
+            padding-left: 4px;
+        }
+    }
+
+    .blog-tags, .blog-comments {
+        margin: 10px 0;
+    }
+}
+
+
+//  Counters
+.slider-counters {
+    .currentslide {
+        background-color: #e8e6e6;
+    }
+
+    span {
+        background-color: #9a9a9a;
+    }
+}
+
+@media screen and (max-width: 47.19em) {
+    .content-wrapper {
+        width: 98%;
+        margin: 0 auto;
+        float: none;
+    }
+
+
+    /*Blog Posts*/
+    .blog-post {
+        font-size: 1.2em;
+
+        p {
+            float: none;
+            padding: 10px 0 0 0;
+            width: 97%;
+        }
+    }
+
+    .blog-side-info {
+        text-align: center;
+        float: none;
+    }
+
+
+    //Aside
+    aside {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.25em;
+
+        p {
+            text-align: left;
+        }
+    }
+    /* Slider Counters*/
+    .slider-counters {
+        text-align: center;
+        margin: 0 28px 40px 0;
+
+        span {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    }
+}

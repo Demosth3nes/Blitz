@@ -1,0 +1,223 @@
+﻿
+//Base css -Mixins,  Variables, Typography
+@import '../base/all_base.scss';
+
+//Header, Aside, Footer
+@import '../modules/all_modules.scss';
+
+//Components
+@import '../../css/components/lightbox.scss';
+@import '../components/buttons.scss';
+
+
+
+//  Counters
+.slider-counters {
+    margin: 50px 0;
+
+    .currentslide {
+        background-color: #e8e6e6;
+    }
+
+    span {
+        background-color: #9a9a9a;
+    }
+}
+
+
+//Main Content
+//Portfolio filter buttons
+.slide_filter-list {
+    font-family: $bebas;
+
+
+    li {
+        display: inline-block;
+        margin: 27px 0 0 15px;
+        border-right: solid 1px black;
+        padding-right: 12px;
+        font-size: 0.875em;
+        cursor: pointer;
+        line-height: 20px;
+    }
+
+    li:first-of-type {
+        margin-left: 0px;
+    }
+
+    li:last-of-type {
+        border: none;
+    }
+}
+
+//Slider container used to hide overflow and ensure responsive projects
+.slider-container {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+//Active Tab
+
+.active-tab {
+    color: #9a9a9a;
+}
+
+
+/* Main Slide that holds the all the projects*/
+.slider {
+    width: 500%;
+    @include transition(all 1.0s ease-in-out);
+    transform: translate(0%);
+
+    ul {
+        float: left;
+        width: 20%;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 10px;
+
+        li {
+            display: inline-block;
+            width: 213px;
+            vertical-align: top;
+            margin-left: 2px;
+        }
+
+        article {
+            padding: 10px;
+
+            h3 {
+                padding-top: 10px;
+            }
+
+            h4 {
+                padding-top: 5px;
+                color: #afaeae;
+            }
+
+            p {
+                font-size: 0.75em;
+                padding-top: 10px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+/*Image container to control image zoom overlay*/
+.image-container {
+    position: relative;
+    width: 210px;
+
+    img {
+        @include transition(opacity ease-in 300ms);
+        opacity: 1;
+        display: block;
+        border: 1px solid #bebebe;
+    }
+    //The image zoom places a overlay on the project image
+    //when hovered
+    .image-zoom {
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        height: 100%;
+        background: #393d37 url(../../graphics/projects/image-zoom.png) no-repeat center;
+        position: absolute;
+    }
+
+    .image-zoom:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+
+/*  Media Queries  */
+
+@media screen and (max-width: 60.56em) {
+    //Layout Content Container
+    .content-wrapper {
+        float: none;
+        margin: 0px auto;
+    }
+
+    .slide_filter-list {
+        text-align: center;
+    }
+
+    /* Slider individual projects*/
+    .slider {
+        ul {
+            li {
+                width: 49%;
+
+                p {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    //Aside
+    aside {
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.25em;
+
+        p {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 50.56em) {
+    /* Slider Counters*/
+    .slider-counters {
+        text-align: center;
+
+        span {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 41.07em) {
+    .content-wrapper {
+        width: 100%;
+    }
+
+    .slide_filter-list {
+        text-align: center;
+
+        li {
+            font-size: 1.15em;
+        }
+    }
+
+    .slider-container {
+        width: 213px;
+        margin: 30px auto;
+    }
+
+    .slider {
+        ul {
+            li {
+                width: 100%;
+            }
+        }
+    }
+    aside {
+      
+        width: 100%;
+      
+    }
+}
