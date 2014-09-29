@@ -9,7 +9,11 @@
 @import '../../css/components/lightbox.scss';
 @import '../components/buttons.scss';
 
-
+/* Modernizr */
+/* IE 8 */
+.no-opacity .image-zoom{
+    display: none;
+}
 
 //  Counters
 .slider-counters {

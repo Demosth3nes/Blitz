@@ -8,6 +8,14 @@
 //Components
 @import '../components/buttons.scss';
 
+/* Modernizr  */
+
+/* IE 9 */
+.no-borderimage .section-top{
+    border-bottom-color: lightgrey;
+}
+
+
 /* Override for the content wrapper*/
 .content-wrapper {
     width: 100%;
@@ -19,6 +27,8 @@
     border-bottom: 5px inset;
     overflow: hidden;
     padding-bottom:60px;
+    
+    
 
     & article:first-child {
         margin-left: 0;
@@ -52,10 +62,7 @@
     }
 
     article {
-        width:33%;
-        float:left;
-        margin-left:4px;
-
+       margin-left:35px;
         .profile_info {
             position: relative;
             padding: 20px;

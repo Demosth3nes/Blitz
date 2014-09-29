@@ -13,10 +13,10 @@
     float: left;
 }
 
-//Responsive 4 Column (of 12) layout
+
 //Spreads three items evenly across the page
 //Then centers the content as the window becomes smaller
-.layout-col4 {
+.layout-col3 {
     width: 30%;
     float: left;
     position: relative;
@@ -24,7 +24,7 @@
 }
 
 @media screen and (max-width: 59em) {
- .layout-col4 {
+ .layout-col3 {
      width:33%;
      margin-left:0;
      }
@@ -34,7 +34,7 @@
   .wrapper{
       width:89%;
   }
-    .layout-col4 {
+    .layout-col3 {
         width: 70%;
         margin: 17px auto;
         float: none;

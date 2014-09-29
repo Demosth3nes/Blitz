@@ -4,7 +4,7 @@
 
     <title> Blitz Front End Web Development and Design </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/minified/about.min.css" rel="stylesheet" />
+    <link href="css/completed/about.css" rel="stylesheet" />
     <script src="scripts/vendor/modernizr.custom.min.js"></script>
     
 
@@ -33,7 +33,7 @@
 
     <div class="wrapper">
 
-        <div class="content-title">
+        <div class="content-title" role="heading">
             <h2>About Us</h2>
             <p>
                 <em>
@@ -42,9 +42,9 @@
                 </em>
             </p>
         </div>
-
-        <section class="section-top">
-            <article class="layout-col4 ">
+    <!-- Key points about the company -->
+        <section class="section-top" role = "main">
+            <article class="layout-col3 ">
                 <h3>Our Philosophy</h3>
                 <p>
                     <span>
@@ -60,7 +60,7 @@
 
                 </p>
             </article>
-            <article class="layout-col4 ">
+            <article class="layout-col3 ">
                 <h3>Our Mission</h3>
                 <p>
                     <span>
@@ -76,7 +76,7 @@
 
                 </p>
             </article>
-            <article class="layout-col4 ">
+            <article class="layout-col3 ">
                 <h3>Our History</h3>
                 <p>
                     <span>
@@ -93,8 +93,9 @@
                 </p>
             </article>
         </section>
-        <section class="section-bottom">
-            <article>
+    <!--  Main employees -->
+    <section class="section-bottom" role = "complementary">
+            <article class="layout-col3">
                 <img src="graphics/about/profile_image.jpg" />
                 <div class="profile_info">
                     <a href="tel:1.306.432.0065">tel:1.306.432.0065</a>
@@ -103,8 +104,8 @@
                     <p>Seded ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laud antium, totam rem aperiam.</p>
 
                 </div>
-            </article>
-            <article>
+            </article >
+            <article class="layout-col3">
                 <img src="graphics/about/profile_image.jpg" />
                 <div class="profile_info">
                     <a href="tel:1.306.432.0065">tel:1.306.432.0065</a>
@@ -114,7 +115,7 @@
 
                 </div>
             </article>
-            <article>
+            <article class="layout-col3">
                 <img src="graphics/about/profile_image.jpg" />
                 <div class="profile_info">
                     <a href="tel:1.306.432.0065">tel:1.306.432.0065</a>
@@ -126,9 +127,10 @@
             </article>
         </section>
     </div>
+    <!-- Footer -->
     <footer>
-        <div class="footer-wrapper">
-            <p>This website was made using a PSD template to show practical experience of creating a website from a PSD.</p>
+        <div class="footer-wrapper" >
+            <p role="contentinfo">This website was made using a PSD template to show practical experience of creating a website from a PSD.</p>
             <br />
             <p>All Content Copyright 2014 &copy; All Rights Reserved.</p>
 

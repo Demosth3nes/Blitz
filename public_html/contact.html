@@ -4,7 +4,7 @@
 
     <title> Blitz Front End Web Development and Design </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/minified/contact.min.css" rel="stylesheet" />
+    <link href="css/completed/contact.css" rel="stylesheet" />
     <script src="scripts/vendor/modernizr.custom.min.js"></script>
 
 
@@ -33,7 +33,7 @@
 
     <div class="wrapper">
         <div class="content-wrapper">
-            <div class="content-title">
+            <div class="content-title" role="header">
                 <h2>Contact Us</h2>
                 <p>
                     <em>
@@ -52,18 +52,18 @@
                 Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a interdum justo ultricies. Sed luctus dui nec nisl tempus faucibus sit amet et sem. Aenean augue sapien, sodales ac bibendum ut, pellentesque id eros.
             </p>
             <!-- Contact Form  -->
-            <form action="#" class="form-contact">
+            <form action="#" class="form-contact" role = "form">
 
-                <input name="first_name" placeholder="First Name" required maxlength="20"></input>
-                <input name="last_name" placeholder="Last Name" required maxlength="20"></input>
-                <input name="email" placeholder="Email Address" required></input>
-                <textarea class="textarea-message" name="message" placeholder="Message (Max 500 char.)" cols="20" rows="4" required maxlength="500"></textarea>
+                <input name="first_name" placeholder="First Name" required maxlength="20" role = "input"></input>
+                <input name="last_name" placeholder="Last Name" required maxlength="20" role = "input"></input>
+                <input name="email" placeholder="Email Address" required role = "input"></input>
+                <textarea class="textarea-message" name="message" placeholder="Message (Max 500 char.)" cols="20" rows="4" required maxlength="500" role = "textbox"></textarea>
                 <input class="" type="submit" name="submit" value="" />
 
             </form>
         </div>
         <!-- Sidebar  -->
-        <aside>
+        <aside role = "complementary">
             <h4>About Blitz</h4>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -72,7 +72,7 @@
 
             </p>
             <h4>Categories</h4>
-            <ul>
+            <ul role="navigation">
                 <li><a href="#">Video (3)</a></li>
                 <li><a href="#">Sports (5)</a></li>
                 <li><a href="#">Media (2)</a></li>
@@ -93,7 +93,7 @@
     <!-- Footer  -->
     <footer>
         <div class="footer-wrapper">
-            <p>This website was made using a PSD template to show practical experience of creating a website from a PSD.</p>
+            <p role="contentinfo">This website was made using a PSD template to show practical experience of creating a website from a PSD.</p>
             <br />
             <p>All Content Copyright 2014 &copy; All Rights Reserved.</p>
 
